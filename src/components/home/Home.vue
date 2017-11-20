@@ -3,8 +3,8 @@
         <div class="header">
             <div class="logo">Syafrizal Akhzan</div>
             <div class="nav">
-                <a>Contact</a>
-                <a>About</a>
+                <a href="/">Contact</a>
+                <a href="/">About</a>
             </div>
         </div>
         <div class="mid-content">
@@ -12,21 +12,32 @@
         </div>
         <div class="portfolios">
             <div class="split-portfolios">
-                <div class="portfolios-item">
+                <a href="/" class="portfolios-item" v-on:mouseover="project0=true" v-on:mouseleave="project0=false">
                     <div class="portfolio-img-container tall">
-                        <img src="./../../assets/sam.png" alt="x" />
+                        <img key="img" v-show="!project0" class="img-small" src="./../../assets/sam.png" alt="x" />
+                        <div key="title" v-show="project0" class="portfolio-img-container-fill">
+                            SAM
+                        </div>
                     </div>
-                </div>
-                <div class="portfolios-item">
-                    <div class="portfolio-img-container short"></div>
-                </div>
+                </a>
+                <a href="/" class="portfolios-item" v-on:mouseover="project1=true" v-on:mouseleave="project1=false">
+                    <div class="portfolio-img-container short">
+                        <img v-show="!project1" class="img-small-width" src="./../../assets/quiz.png" alt="x" />
+                        <div v-show="project1" class="portfolio-img-container-fill">
+                            PORSE QUIZ
+                        </div>
+                    </div>
+                </a>
             </div>
             <div class="split-portfolios">
-                <div class="portfolios-item">
+                <a href="/" class="portfolios-item" v-on:mouseover="project2=true" v-on:mouseleave="project2=false">
                     <div class="portfolio-img-container short">
-                        <img src="./../../assets/sam.png" alt="x" />
+                        <img v-show="!project2" class="img-small" src="./../../assets/ehs.png" alt="x" />
+                        <div v-show="project2" class="portfolio-img-container-fill">
+                            LAB EHS
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="more-portfolios">
                 <button>More portfolios</button>
@@ -112,6 +123,9 @@ export default {
     name: 'Home',
     data() {
         return {
+            project0: false,
+            project1: false,
+            project2: false,
             skills: {
                 fronts: [{
                         description: 'Angular JS',
@@ -174,7 +188,7 @@ export default {
                         score: 4
                     }, {
                         description: 'Team Foundation Server',
-                        score: 5
+                        score: 4
                     }, {
                         description: 'Jenkins (CI)',
                         score: 2
@@ -236,6 +250,7 @@ export default {
 .portfolios-item {
     width: calc(100% - 20px);
     padding: 10px;
+    text-decoration: none;
 }
 
 .portfolio-img-container {
@@ -254,8 +269,16 @@ export default {
         height: 50vh;
     }
 
-    img {
-        height: 50%;
+    .img-small {
+        height: 60%;
+    }
+
+    .img-big {
+        height: 75%;
+    }
+
+    .img-small-width {
+        width: 75%;
     }
 }
 
@@ -371,5 +394,18 @@ export default {
 }
 .exp-title {
     font-weight: bold;
+}
+
+.portfolio-img-container-fill {
+    background-color: darkgrey;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4.2rem;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
 }
 </style>
