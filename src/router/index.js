@@ -7,11 +7,14 @@ import Portfolio from '@/components/portfolio/Portfolio'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/',
       name: 'Home',
       component: Home
+    }, {
+      path: '/portfolios/:code',
+      name: 'Portfolio',
+      component: Portfolio
     }
   ]
 })
