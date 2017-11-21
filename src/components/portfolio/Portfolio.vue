@@ -66,10 +66,10 @@ export default {
               code: 'ehs',
               title: 'Lab EHS',
               acronym: '\'Laboratorium Lingkungan\' Astra International',
-              desc: 'A web based application, used for smart quiz at PORSE Astra. It uses realtime mechanism to show the answers of all quiz participants while participants use ipad to answer the questions.',
+              desc: `A web based application, used for environment data analytical management for Astra Internationals's laboratorium.`,
               status: 'Done',
-              roles: ['Developer ( September 2017 )'],
-              technologies: ['Vanilla JS, jQuery, Socket.io, Express JS, Mongoose, Mongo DB']
+              roles: ['Developer ( September 2017 - October 2017 )'],
+              technologies: ['React JS, jQuery, Bootstrap']
           }]
       }
   },
