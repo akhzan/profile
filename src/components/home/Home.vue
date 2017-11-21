@@ -3,8 +3,8 @@
         <div class="header">
             <div class="logo">Syafrizal Akhzan</div>
             <div class="nav">
-                <router-link to="/">Contact</router-link>
-                <router-link to="/">About</router-link>
+                <router-link to="/about">About</router-link>
+                <router-link to="/contact">Contact</router-link>
             </div>
         </div>
         <div class="mid-content">
@@ -22,7 +22,7 @@
                         </div>
                     </div>
                 </router-link>
-                <router-link to="/portfolios/porse" class="portfolios-item">
+                <router-link to="/portfolios/porse" class="portfolios-item wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
                     <div href="/" v-on:mouseover="project1=true" v-on:mouseleave="project1=false">
                         <div class="portfolio-img-container short">
                             <img v-show="!project1" class="img-small-width" src="./../../assets/quiz.png" alt="x" />
@@ -34,7 +34,7 @@
                 </router-link>
             </div>
             <div class="split-portfolios">
-                <router-link to="/portfolios/ehs" class="portfolios-item">
+                <router-link to="/portfolios/ehs" class="portfolios-item wow fadeInUp" data-wow-duration="1s">
                     <div v-on:mouseover="project2=true" v-on:mouseleave="project2=false">
                         <div class="portfolio-img-container short">
                             <img v-show="!project2" class="img-small" src="./../../assets/ehs.png" alt="x" />
@@ -45,7 +45,7 @@
                     </div>
                 </router-link>
             </div>
-            <div class="experience">
+            <div class="experience wow fadeInUp">
                 <div class="experience-title">job experiences</div>
                 <div class="experience-item">
                     <div class="exp-title">Frontend Developer</div>
@@ -63,9 +63,9 @@
                     <div class="exp-time">December 2014 - December 2015</div>
                 </div>
             </div>
-            <div class="skills">
+            <div class="skills wow fadeInUp">
                 <div class="skill-container">
-                    <div class="skill-content">
+                    <div class="skill-content wow fadeInUp">
                         <div class="skill-header">
                             <div class="skill-title">
                                 <div>Frontend Technologies</div>
@@ -82,7 +82,7 @@
                     </div>
                 </div>
                 <div class="skill-container">
-                    <div class="skill-content small top">
+                    <div class="skill-content small top wow fadeInUp">
                         <div class="skill-header">
                             <div class="skill-title">
                                 <div>Backend Technologies</div>
@@ -97,7 +97,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="skill-content small">
+                    <div class="skill-content small wow fadeInUp">
                         <div class="skill-header">
                             <div class="skill-title">
                                 <div>Other Technologies</div>

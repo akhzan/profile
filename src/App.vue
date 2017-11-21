@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "app"
+  name: "app",
 };
 </script>
 
@@ -51,6 +51,7 @@ html {
     text-decoration: none;
     cursor: pointer;
     color: $primary-color;
+    transition: all 0.5s ease-out;
 
     &:hover {
       background-color: $primary-color;
@@ -68,9 +69,13 @@ html {
   margin-top: 70px;
   border-top: 1px solid $primary-color;
 }
-
 .copyright {
   padding: 20px 0;
   font-size: 0.75em;
+}
+.x-button {
+  font-size: 1.32rem;
+  text-decoration: none;
+  color: $primary-color;
 }
 </style>

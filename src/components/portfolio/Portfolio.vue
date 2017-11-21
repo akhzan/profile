@@ -1,10 +1,10 @@
 <template>
   <div class="container">
     <div class="header">
-        <router-link class="x-button" to="/">x</router-link>
+        <router-link class="x-button" to="/">&#x2716</router-link>
         <div class="nav">
-            <router-link to="/">Contact</router-link>
-            <router-link to="/">About</router-link>
+            <router-link to="/about">About</router-link>
+            <router-link to="/contact">Contact</router-link>
         </div>
     </div>
     <div class="pf-content">
@@ -17,19 +17,19 @@
         <div class="pf-acronym">{{selectedPortfolio.acronym}}</div>
         <p class="block pf-desc"><i>{{selectedPortfolio.desc}}</i></p>
         <div class="pf-add">
-            <div class="block">
+            <div class="block wow fadeInUp">
                 <div class="pf-add-title">Status</div>
                 <div class="pf-add-items">
                     <div>{{selectedPortfolio.status}}</div>
                 </div>
             </div>
-            <div class="block">
+            <div class="block wow fadeInUp">
                 <div class="pf-add-title">Roles</div>
                 <div class="pf-add-items">
                     <div v-for="item in selectedPortfolio.roles" :key="item">{{item}}</div>
                 </div>
             </div>
-            <div class="block">
+            <div class="block wow fadeInUp">
                 <div class="pf-add-title">Technologies</div>
                 <div class="pf-add-items">
                     <div v-for="item in selectedPortfolio.technologies" :key="item">{{item}}</div>
@@ -82,11 +82,6 @@ export default {
 
 <style lang="scss">
 @import "./../../main.scss";
-.x-button {
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: $primary-color;
-}
 .pf-content {
     margin-top: 50px;
     width: 100%;
